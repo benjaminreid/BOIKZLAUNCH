@@ -558,38 +558,20 @@ p {
   position: relative;
 }
 
-.h1 {
-  width: 80%;
-}
-
-.sub-heading {
-  width: 55%;
-}
-
 .logo img {
   margin: 11px 0 0 0; 
 }
 
 .time-head {
-  width: 40%;
   margin-top: 5%;
-}
-
-.time {
-  width: 40%;
-}
-
-.where {
-  width: 50%;
-}
-
-.tod {
-  width: 18%;
 }
 
 .buy {
-  width: 18%;
   margin-top: 5%;
+  margin-bottom: 20px;
+}
+
+.porder {
   margin-bottom: 20px;
 }
 
@@ -603,4 +585,22 @@ p {
   padding: 10px;
   display: inline-block;
   overflow: hidden;
+}
+
+.emblem {
+  width: 77px;
+  height: 95px;
+  background: url(../images/boikzmoind-emblem.png) no-repeat;
+  position: absolute;
+  top: 3%;
+  right: 0;
+  z-index: 1;
+}
+
+.pre-order {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  right: 0;
+  text-align: right;
 }
