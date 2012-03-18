@@ -13,10 +13,6 @@
     mouseX = e.pageX, mouseY = e.pageY;
   });
 
-  $(window).on('resize', function() {
-    updateScreen();  
-  });
-
   function updateScreen() {
     screenW = $(window).width();
     return screenW;
@@ -40,9 +36,40 @@
     }, 1000/60);
   }
 
+  
+
+
+  var container   = $('.container'),
+      containerW  = $('.container').width(),
+      containerWP = containerW/100,
+      scalers     = $('.fscale'), 
+      scale       = 0.1;
+
+  function setFontSizes() {
+    containerW  = container.width(),
+    containerWP = containerW/100;
+    $.each(scalers, function(i,el) {
+      var jEl     = $(el),
+          // get the element scale factor
+          fscale  = jEl.data('scale'),
+          // the fontsize it's own scale, times the base scale * the 1% width of the container so the size is relative
+          fontSize = (fscale * scale) * containerWP;
+      jEl.css({
+        'font-size': fontSize,
+        'line-height': fontSize+'px'
+      });
+    });
+  }
+
+  $(window).on('resize', function() {
+    setFontSizes();
+    updateScreen();  
+  });
+
   function init() {
     updateScreen();
     updateParallaxLayer();
+    setFontSizes();
   }
   init();
 
