@@ -546,10 +546,6 @@ p {
   margin: 0;
 }
 
-.fscale {
-  background: rgba(0,0,0,0.5);
-}
-
 .wrapper {
   width: 100%;
   height: 600px;
@@ -558,8 +554,8 @@ p {
 
 .container {
   width: 92%;
-  height: 600px;
   margin: 4%;
+  position: relative;
 }
 
 .h1 {
@@ -574,7 +570,12 @@ p {
   margin: 11px 0 0 0; 
 }
 
-.time-head, .time {
+.time-head {
+  width: 40%;
+  margin-top: 5%;
+}
+
+.time {
   width: 40%;
 }
 
@@ -588,12 +589,12 @@ p {
 
 .buy {
   width: 18%;
+  margin-top: 5%;
+  margin-bottom: 20px;
 }
 
 .button {
   font-family: 'Helvetica Neue','Helvetica','Arial',sans-serif;
-  font-size: 38px;
-  line-height: 38px;
   border: 5px solid #fff;
   color: #fff;
   text-decoration: none;
